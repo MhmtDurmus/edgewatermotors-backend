@@ -23,12 +23,12 @@ public class Appointment {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Future
-    @Column(name = "Tijdstip")
-    private LocalDateTime tijdstip;
+    @Column(name = "Time_Stamp")
+    private LocalDateTime timeStamp;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Column(name = "UurMarge")
-    private LocalTime uurMarge;
+    @Column(name = "Hour")
+    private LocalTime hour;
 
     @NotNull
     @Column(name = "Klant_Email")
@@ -37,9 +37,9 @@ public class Appointment {
     public Appointment() {
     }
 
-    public Appointment(@Future LocalDateTime tijdstip, LocalTime uurMarge, @NotNull String costumer) {
-        setTijdstip(tijdstip);
-        setUurMarge(uurMarge);
+    public Appointment(@Future LocalDateTime timeStamp, LocalTime hour, @NotNull String costumer) {
+        setTimeStamp(timeStamp);
+        setHour(hour);
         setCostumer(costumer);
     }
 
@@ -48,12 +48,12 @@ public class Appointment {
         return id;
     }
 
-    public LocalDateTime getTijdstip() {
-        return tijdstip;
+    public LocalDateTime getTimeStamp() {
+        return timeStamp;
     }
 
-    public LocalTime getUurMarge() {
-        return uurMarge;
+    public LocalTime getHour() {
+        return hour;
     }
 
     public String getCostumer() {
@@ -65,12 +65,12 @@ public class Appointment {
         this.id = id;
     }
 
-    public void setTijdstip(LocalDateTime tijdstip) {
-        this.tijdstip = tijdstip;
+    public void setTimeStamp(LocalDateTime tijdstip) {
+        this.timeStamp = tijdstip;
     }
 
-    public void setUurMarge(LocalTime uurMarge) {
-        this.uurMarge = uurMarge;
+    public void setHour(LocalTime uurMarge) {
+        this.hour = uurMarge;
     }
 
     public void setCostumer(String costumer) {
