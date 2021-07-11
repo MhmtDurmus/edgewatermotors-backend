@@ -13,7 +13,10 @@ import javax.validation.constraints.Email;
 import java.util.List;
 
 import static be.edgewater.edgewatermotors.tools.StringTool.validEmail;
-
+/**
+ *
+ * @author Mehmet Durmus
+ * */
 @Entity
 @Table(name = "Customer")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
